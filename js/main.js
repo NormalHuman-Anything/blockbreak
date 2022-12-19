@@ -1,6 +1,7 @@
 const canvas = document.querySelector("#myCanvas");
 const ctx = canvas.getContext("2d");
 
+const aaaaaaaa = 0;
 //ctx.beginPath();
 //ctx.rect(20, 40, 50, 50);
 //ctx.fillStyle = "#FF0000";
@@ -9,7 +10,7 @@ const ctx = canvas.getContext("2d");
 
 let ballX = canvas.width / 2;
 let ballY = canvas.height / 2;
-let dx = 2;
+let dx = 1.9123564;
 let dy = 2;
 let barPos = 0;
 let barMouse = 1;
@@ -53,12 +54,16 @@ function drawBar() {
     }
 }
 
+
 function draw(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
     drawBar();
 }
 
+var rand = function rand() {
+    return Math.floor(Math.random() * (1 - (-1) + 1)) + (-1); 
+}      
 
 setInterval(draw, 1)
 
@@ -87,9 +92,10 @@ setInterval(draw, 1)
 function mousePosHandler(e) {
     //console.log(e);
     //drawBar();
-    if(e.clientX-600 >= 0 && e.clientX-600 <= 410) {
-        barMouse = e.clientX-600;
+    if(e.clientX-480 >= 0 && e.clientX-480 <= 410) {
+        barMouse = e.clientX-490;
     }
+    console.log(dx)
     //console.log(barMouse);
 }
 
