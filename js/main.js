@@ -7,7 +7,7 @@ const aaaaaaaa = 0;
 //ctx.fillStyle = "#FF0000";
 //ctx.fill();
 //ctx.closePath();
-
+ 
 let ballX = canvas.width / 2;
 let ballY = canvas.height / 2;
 let dx = 1.9123564;
